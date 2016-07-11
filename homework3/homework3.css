@@ -1,29 +1,49 @@
-@media all and (min-width:420px) and (max-width:700px){
+@media all and (min-width:420px) and (max-width:770px){
     .header, .menu, .footer, .main{
         width:100%;
     }
+    body{
+        height:1000px;
+    }
      #cat{
-        width:35%;
+        width:40%;
     }
     .header h1{
         font-size: 150%;
         margin-bottom:0%;
     }
-    
     .header .search{
         width:100%;
         margin-top:0%;
         height:17%;
     }
     .search img{
-        width:15%;
-    }   
-
+        width:18%;
+    }  
+    .main{
+        margin-top:-10%;
+    } 
+    .sidebar{  
+        width: 100%;
+        height:40%;
+    }
+    .content{
+        width:100%;
+        height:60%;
+        padding: 2%;
+    }
+    .content img{
+        height:70%;
+        width:55%;
+    }
 }
 
-@media all and (min-width:700px) and (max-width:1100px){
+@media all and (min-width:770px) and (max-width:1200px){
     .header, .menu, .footer, .main{
         width:70%;
+    }
+     body{
+        height:800px;
     }
      #cat{
         width:30%;
@@ -40,12 +60,27 @@
     .search img{
         width:12%;
     }   
-
+    .sidebar{  
+        width: 100%;
+        height:40%;
+    }
+    .content{
+        width:100%;
+        height:60%;
+        padding: 2%;
+    }
+    .content img{
+        height:90%;
+        width:45%;
+    }
 }
 
-@media all and (min-width:1100px) and (max-width:2000px){
+@media all and (min-width:1200px) and (max-width:2000px){
     .header, .menu, .footer, .main{
         width:70%;
+    }
+     body{
+        height:700px;
     }
     #cat{
         width:17%;
@@ -63,22 +98,33 @@
     .search img{    
         width:9%;
     }  
-
+    .sidebar{  
+        width: 30%;
+        height:100%;
+        border-left:2px solid black;
+    }
+    .content{
+        width:70%;
+        height:100%;
+        padding: 2%;
+    }
+     .content img{
+        height:80%;
+        width:50%;
+    }
 }
-
-
 
  body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center; 
-    height:600px;
 }
 .header{
     display: flex;
     justify-content: center;    
-    height:25%; 
-    box-sizing: border-box;   
+    height:20%; 
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;       
 }
 .header>img{
     width:17%;
@@ -94,7 +140,7 @@
     position: relative;
 }
 .header h2{
-        font-size:120%;
+    font-size:120%;
 }
 .search img{
     position:absolute;
@@ -106,9 +152,9 @@
     width:100%;
     padding-left: 15%;
 }
-
 .menu {
     height: 10%;
+    font-family: 'Oswald', sans-serif;    
 }
 .menu ul{
     display: flex;
@@ -122,49 +168,39 @@ li{
     margin:0 5%;
     font-weight: bold;
 }
-
 .main{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center; 
-    height: 50%;
+    height: 55%;
     background: #96CCD9;
     position: relative;
 }
-
-
-.sidebar{  
-    width: 30%;
-    border-right:2px solid black;
-    height:100%;  
-    padding:4%; 
+.sidebar{   
+    padding:6% 4% 2%; 
+    font-family: 'Oswald', sans-serif;    
 }
-
 .sidebar input[type="text"]{
-    height:60%;
+    height:30%;
     width:100%;
-    margin:10% 0;
+    margin:1% 0 3% 0;
 }
 .content{
-    width:70%;
-    height:100%;
-    padding: 2%
+        font-family: 'Oswald', sans-serif;    
 }
-
 .content img{
-    height:100%;
-    width:50%;
     float:left;
+    margin-right:5%;
 }
 .content p{
-    text-align: center;
-    font-size: 100%;
+    text-align: left;
+    font-size: 100%; 
 }
 .footer{
     position: relative;
     height: 15%;
     background:#A1C0C7;
 }
-
 .footer img{
     position: absolute;
     top:10%;
@@ -176,7 +212,7 @@ li{
 
 #cat:hover { 
     transform: rotate(360deg); }
-
+    
 @keyframes mymove {
     0%   {left: 5%;}
     25%  {left: 60%;}
