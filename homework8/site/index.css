@@ -1,0 +1,57 @@
+body{
+    display:flex;
+    justify-content: center;
+}
+
+.main{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width:50%;   
+}
+
+.comment{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: fixed;
+    top:0;
+    width:50%;
+    height:30%;
+    background: white;
+    padding: 1%;
+}
+
+.comment .name{
+    height:10%;
+    width:60%;
+    min-height: 10px;
+    margin:2%;
+}
+
+.comment .message{
+    width:80%;
+    min-height: 70px;
+    height:30%;
+}
+
+#add{
+    height:15%;
+    width:30%;
+    margin-top:2%;
+    font-size: 100%; 
+}
+
+p{
+    font-size: 100%;
+}
+
+.content{
+    width:80%;
+    min-height: 300px;
+    height:70%;
+    /*background: #DEE0E0;*/
+    padding:1% 10%;
+    margin-top:50%;     
+}
