@@ -1,0 +1,13 @@
+button{
+    height:20px;
+    width:60px;
+    margin-left:20px;
+}
+
+.addUser{
+    position: relative;
+}
+.add{
+    position: absolute;
+    
+}
