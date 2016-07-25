@@ -11,23 +11,37 @@ var list = [
     }
 ];
 
-class ShowUser extends React.component {
+class ShowUser extends React.Component {
+
     render() {
-        var name = this.props.data.name;
+        //  var name = this.props.data.name;
         return (
-            <p className="name">{name} <button>Delete</button></p>
+            <p className="name">{this.props.data.name}
+                <button className="delete" onClick={() => this.props.onDelete(this.props.data.id) }>Delete</button></p>
         )
     }
 };
 
 class ShowList extends React.Component {
+
+    constructor(props, context) {
+        super(props, context);
+        this.state = {
+            deleted: []
+        };
+    };
+
+    onDelete(id) {
+        this.setState({ deleted: this.state.deleted.concat([id]) });
+    };
+
     render() {
         var list = this.props.data;
         if (list) {
-            var dataTemplate = list.map(function (item, index) {
+            var dataTemplate = list.filter(item => this.state.deleted.indexOf(item.id) === -1).map(function (item, index) {
                 return (
                     <div className="user" key={index}>
-                        <ShowUser data={item} />
+                        <ShowUser data={item} onDelete={id => this.onDelete(id)} />
                     </div>
                 )
             });
